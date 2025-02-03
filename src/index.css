@@ -21,7 +21,7 @@
 }
 
 .coin-container {
-  @apply relative w-32 h-32 mx-auto my-8;
+  @apply relative w-52 h-52 mx-auto;
   perspective: 1000px;
 }
 

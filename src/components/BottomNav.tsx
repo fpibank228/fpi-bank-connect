@@ -1,4 +1,4 @@
-import { Home, Wallet, ChartBar, Settings } from "lucide-react";
+import { Home, Users, Award, ListTodo } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const BottomNav = () => {
@@ -13,17 +13,17 @@ const BottomNav = () => {
           <Home size={24} />
           <span>Home</span>
         </Link>
-        <Link to="/wallet" className={`nav-link ${isActive('/wallet') ? 'active' : ''}`}>
-          <Wallet size={24} />
-          <span>Wallet</span>
+        <Link to="/friends" className={`nav-link ${isActive('/friends') ? 'active' : ''}`}>
+          <Users size={24} />
+          <span>Friends</span>
         </Link>
-        <Link to="/stats" className={`nav-link ${isActive('/stats') ? 'active' : ''}`}>
-          <ChartBar size={24} />
-          <span>Stats</span>
+        <Link to="/leaderboard" className={`nav-link ${isActive('/leaderboard') ? 'active' : ''}`}>
+          <Award size={24} />
+          <span>Leaderboard</span>
         </Link>
-        <Link to="/settings" className={`nav-link ${isActive('/settings') ? 'active' : ''}`}>
-          <Settings size={24} />
-          <span>Settings</span>
+        <Link to="/tasks" className={`nav-link ${isActive('/tasks') ? 'active' : ''}`}>
+          <ListTodo size={24} />
+          <span>Tasks</span>
         </Link>
       </div>
     </nav>

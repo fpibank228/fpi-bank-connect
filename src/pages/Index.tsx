@@ -1,8 +1,8 @@
 import RotatingCoin from '../components/RotatingCoin';
 import BottomNav from '../components/BottomNav';
-import { Hash, DollarSign, Wallet } from 'lucide-react';
+import { Hash, DollarSign, Wallet, ArrowDownLeft, ArrowUpRight, ArrowLeftRight } from 'lucide-react';
 import { Button } from '../components/ui/button';
-import { useToast } from '../components/ui/use-toast';
+import { useToast } from '../hooks/use-toast';
 
 const Index = () => {
   const { toast } = useToast();
@@ -14,7 +14,7 @@ const Index = () => {
   const copyHash = () => {
     navigator.clipboard.writeText('EQD0KpcRMh-sKO2z5-vOjgvFjTT58tO-2Nmvxqg5ocFQFtWz');
     toast({
-      description: "Hash copied to clipboard",
+      description: "Hash успешно скопирован",
       duration: 2000,
     });
   };
@@ -35,24 +35,48 @@ const Index = () => {
             <Button 
               variant="secondary" 
               onClick={copyHash}
-              className="flex-1 max-w-[200px]"
+              className="flex-1 max-w-[200px] bg-[#2C2B2B]"
             >
               <Hash size={20} />
               Hash
             </Button>
             <Button 
               variant="secondary"
-              className="flex-1 max-w-[200px]"
+              className="flex-1 max-w-[200px] bg-[#2C2B2B]"
             >
               <DollarSign size={20} />
               $0.05
             </Button>
             <Button 
               variant="secondary"
-              className="flex-1 max-w-[200px]"
+              className="flex-1 max-w-[200px] bg-[#2C2B2B]"
             >
               <Wallet size={20} />
               Connect
+            </Button>
+          </div>
+
+          <div className="flex justify-center gap-2 px-4">
+            <Button 
+              variant="secondary"
+              className="flex-1 max-w-[200px] bg-[#2C2B2B]"
+            >
+              <ArrowDownLeft size={20} />
+              Receive
+            </Button>
+            <Button 
+              variant="secondary"
+              className="flex-1 max-w-[200px] bg-[#2C2B2B]"
+            >
+              <ArrowUpRight size={20} />
+              Withdraw
+            </Button>
+            <Button 
+              variant="secondary"
+              className="flex-1 max-w-[200px] bg-[#2C2B2B]"
+            >
+              <ArrowLeftRight size={20} />
+              Transfer
             </Button>
           </div>
         </div>
